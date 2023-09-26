@@ -9,38 +9,128 @@
             if(link==0) window.location.href = 'nostyle.html';
         }
     </script>
+    <style>
+        body{
+            font-family: Arial;
+            background-color: rgb(209, 72, 54);
+            line-height: 20px;
+        }
+
+        .wrapper{
+            position: relative;
+            overflow: auto;
+        }
+
+        #top{
+            color: white;
+            font-size: 30px;
+            padding: 15px;
+            line-height: 26px;
+        }
+
+        #top h1{
+            margin: 0px;
+            line-height: 50px;
+        }
+
+        #main{
+            background-color: white;
+            padding: 10px;
+            font: 80% Verdana;
+        }
+
+        #main h1, h2{
+            color: rgb(209, 72, 54);
+        }
+
+        #menubar{
+            width: 190px;
+            float: right;
+        }
+
+        #menulist{
+            font: 16px verdana;
+            padding: 0;
+        }
+        
+        .menuitem{
+            width: 155px;
+            background-color: rgb(209, 72, 54);
+            border:1px solid rgb(209, 72, 54);
+            list-style-type: none; /*마커(점) 제거*/
+            text-align: center;
+            border-radius: 40px;
+            margin: 10px;
+            padding: 5px;
+            color: white;
+        }
+
+        .menuitem:nth-child(2){
+            font-weight: bold;
+            background-color: white;
+            color: rgb(209, 72, 54);
+        }
+
+        .menuitem:hover{
+            background-color: white;
+            color: rgb(209, 72, 54);
+            cursor: pointer;
+        }
+
+        a{
+            color: rgb(209, 72, 54);
+            text-decoration: none; /*밑줄 제거*/
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
+        #sidebar{
+            background-color: rgb(246, 218, 215);
+            color: rgb(209, 72, 54);
+            padding: 10px;
+        }
+
+        #bottom{
+            text-align: center;
+            color: white;
+            padding: 10px;
+            font-size: 70%;
+        }
+    </style>
 </head>
 <body>
-    <div> 
+    <div class="wrapper"> 
         <!-- foundation -->
-        <div>
+        <div id="top">
             <!-- top -->
             <h1>Welcome to 김민서's Homepage</h1>
             <p>Use the menu to select different Stylesheets</p>
         </div>
-        <div>
+        <div class="wrapper">
             <!-- middle -->
-            <div>
+            <div id="menubar">
                 <!-- ul? -->
-                <ul>
-                    <li>
+                <ul id="menulist">
+                    <li class="menuitem">
                         Stylesheet 1
                     </li>
-                    <li>
+                    <li class="menuitem">
                         Stylesheet 2
                     </li>
-                    <li>
+                    <li class="menuitem">
                         Stylesheet 3
                     </li>
-                    <li>
+                    <li class="menuitem">
                         Stylesheet 4
                     </li>
-                    <li onclick="reStyle(0);return">
+                    <li class="menuitem" onclick="reStyle(0);return">
                         No Stylesheet
                     </li>
                 </ul>
             </div>
-            <div>
+            <div id="main">
                 <!-- content -->
                 <h1>Same Page Different Stylesheets</h1>
                 <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:<br>
@@ -51,13 +141,13 @@
                     <a href="nostyle.html">No Stylesheet</a>.
                 </p>
             </div>
-            <div>
+            <div id="sidebar">
                 <!-- sidebar -->
                 <h3>Side-Bar</h3>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
             </div>
         </div>
-        <div>
+        <div id="bottom">
             <!-- bottom -->
             Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
         </div>
