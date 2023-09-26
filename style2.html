@@ -7,6 +7,8 @@
     <script>
         function reStyle(link){
             if(link==0) window.location.href = 'nostyle.html';
+            else if(link==1) window.location.href = 'style1.html'
+            else if(link==2) window.location.href = 'style2.html'
         }
     </script>
     <style>
@@ -113,10 +115,10 @@
             <div id="menubar">
                 <!-- ul? -->
                 <ul id="menulist">
-                    <li class="menuitem">
+                    <li class="menuitem" onclick="reStyle(1);">
                         Stylesheet 1
                     </li>
-                    <li class="menuitem">
+                    <li class="menuitem" onclick="reStyle(2);">
                         Stylesheet 2
                     </li>
                     <li class="menuitem">
@@ -125,7 +127,7 @@
                     <li class="menuitem">
                         Stylesheet 4
                     </li>
-                    <li class="menuitem" onclick="reStyle(0);return">
+                    <li class="menuitem" onclick="reStyle(0);">
                         No Stylesheet
                     </li>
                 </ul>
@@ -134,7 +136,7 @@
                 <!-- content -->
                 <h1>Same Page Different Stylesheets</h1>
                 <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:<br>
-                    <a herf="">Stylesheet1</a>, <a herf="">Stylesheet2</a>, <a herf="">Stylesheet3</a>, <a herf="">Stylesheet4</a>.
+                    <a href="style1.html">Stylesheet1</a>, <a href="style2.html">Stylesheet2</a>, <a href="">Stylesheet3</a>, <a href="">Stylesheet4</a>.
                 </p>
                 <h2>No Styles</h2>
                 <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:<br>
