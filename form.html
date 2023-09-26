@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper{
+            position: relative;
+            overflow: auto;
+        }
+
+        #title{
+            width: auto;
+            background-color: gray;
+            padding: 5px;
+            margin: 10px;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="warpper">
+        <div id="title">
+            <h1>&nbsp;HTML Forms&nbsp;</h1>
+        </div>
+        <div id="main">
+            <form action="" method="post">
+                <fieldset style="width:max-content;margin:10px">
+                    <legend>기본정보 입력</legend>
+                    <label for="username">이름 : </label>
+                    <input type="text", id="username" name="username"><br>
+                    <label for="gender">성별 : </label>
+                    <input type="radio", id="gender" name="gender" value="1">남자 
+                    <input type="radio", id="gender" name="gender" value="2">여자 
+                    <input type="radio", id="gender" name="gender" value="3" checked>공개하지 않음<br>
+                    <label for="birth">생일 : </label>
+                    <input type="date", id="birth" name="birth" min="1900-1-1" max="2023-09-27"><br>
+                </fieldset> <br>
+                <fieldset style="width:max-content;margin:10px">
+                    <legend>학생 정보</legend>
+                    <label for="studentID">학번 : </label>
+                    <input type="text", id="studentID" name="studentID"><br>
+                    <label for="department">학부 : </label>
+                    <input id="department" name="department" list="departments">
+                    <datalist id="departments">
+                        <option value="글로벌리더쉽"></option>
+                        <option value="국제어문"></option>
+                        <option value="경영경제"></option>
+                        <option value="법학부"></option>
+                        <option value="커뮤니케이션"></option>
+                        <option value="상담복지"></option>
+                        <option value="생명과학"></option>
+                        <option value="공간환경시스템"></option>
+                        <option value="전산전자"></option>
+                        <option value="콘텐츠융합디자인"></option>
+                        <option value="기계제어"></option>
+                        <option value="ICT창업학부"></option>
+                        <option value="창의융합교육원"></option>
+                        <option value="AI융합교육원"></option>
+                    </datalist><br>
+                    <label for="rc">소속 RC : </label>
+                    <select id="rc" name="rc">
+                        <option value="1" selected>토레이</option>
+                        <option value="2">장기려</option>
+                        <option value="3">카이퍼</option>
+                        <option value="4">손양원</option>
+                        <option value="5">열송학사</option>
+                        <option value="6">카마이클</option>
+                    </select>
+                </fieldset><br>
+                <fieldset style="width:max-content;margin:10px">
+                    <legend>기타 정보</legend>
+                    <label for="wakeup">학기 중에 주로 일어나는 시간(복수 선택) : </label><br>
+                    <input type="checkbox" id="wakeup" name="wakeup" value="1">6시
+                    <input type="checkbox" id="wakeup" name="wakeup" value="1">7시
+                    <input type="checkbox" id="wakeup" name="wakeup" value="1">8시
+                    <input type="checkbox" id="wakeup" name="wakeup" value="1">9시
+                    <input type="checkbox" id="wakeup" name="wakeup" value="1">10시
+                    <input type="checkbox" id="wakeup" name="wakeup" value="1">11시
+                    <input type="checkbox" id="wakeup" name="wakeup" value="1">12시
+                    <input type="checkbox" id="wakeup" name="wakeup" value="1">기타<br>
+                    <br>
+                    <label for="tmi">TMI 3가지!</label><br>
+                    <textarea id="tmi" name="tmi" cols="40" rows="6"></textarea>
+                </fieldset><br>
+                <input type="submit" value="제출">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
