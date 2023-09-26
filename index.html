@@ -4,8 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .wrapper{
+            position: relative;
+            overflow: auto;
+        }
+
+        .container{
+            display: flex;
+            align-items: center;
+        }
+
+        #top{
+            background-color: rgb(140, 144, 233);
+            color: white;
+            border-radius: 10px;
+            font-size: 15px;
+            padding: 5px;
+            margin: 5px;
+        }
+
+        #menubar{
+            width: max-content;
+            background-color: rgb(255, 255, 255);
+            border: 2px solid rgb(177, 122, 255);
+            border-radius: 10px;
+            margin: 10px;
+            float: left;
+        }
+
+        .menuitem{
+            width: 130px;
+            background-color: rgb(140, 144, 233);
+            border: 2px solid rgb(255, 255, 255);
+            border-radius: 5px;
+            text-align: center;
+            list-style-type: none;
+        }
+
+        #menulist, #main, .menuitem{
+            padding: 10px;
+            margin: 5px;
+        }
+
+        #main{
+            font: verdana;
+            font-size: 30px;
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover{
+            cursor: pointer;
+            text-decoration: dotted;
+        }
+
+        .image {
+            position: relative;
+            border-radius: 30%
+        }
+    </style>
 </head>
 <body>
-    <h1>CSEE</h1>
+    <div class="wrapper">
+        <div id="top" class="container">
+            <h1>김민서's Homepage Bookmark Collection&nbsp;</h1>
+            <img src="C:\Users\김민서\Desktop\00__\sleep.gif" width="50" height="50" class="image">
+        </div>
+        <div id="menubar">
+            <ul id="menulist">
+                <li class="menuitem">
+                    <a href="nostyle.html">No Stylesheet</a>
+                </li>
+                <li class="menuitem">
+                    <a href="style1.html">Stylesheet 1</a>
+                </li>
+                <li class="menuitem">
+                    <a href="style2.html">Stylesheet 2</a>
+                </li>
+            </ul>
+        </div>
+        <div id="main">
+            &nbsp;Have a happy Chuseok!
+        </div>
+    </div>
 </body>
 </html>
